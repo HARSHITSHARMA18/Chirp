@@ -8,8 +8,7 @@ function App() {
         <Header />
 
         <main className="min-h-96 flex items-center justify-center">
-          {/* <Outlet /> */}
-          Outlet
+          <Outlet />
         </main>
 
         <Footer />

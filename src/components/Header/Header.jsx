@@ -42,13 +42,12 @@ const Header = () => {
   ];
 
   return (
-    <header className="py-3 shadow bg-[#292929]">
+    <header className="py-3 shadow bg-[#292929] border-b-2 rounded-lg">
       <Container>
-        <nav className="flex">
-          <div className="mr-4">
+        <nav className="flex drop-shadow-xl ">
+          <div className="mr-1">
             <Link to="/">
-              {/* <Logo width={"15%"} /> */}
-              <Logo />
+              <Logo width={"10%"} />
             </Link>
           </div>
 
@@ -60,10 +59,10 @@ const Header = () => {
                   <NavLink
                     to={`${item.slug}`}
                     className={({ isActive }) =>
-                      `font-medium mr-1.5 sm:mr-5 p-1 text-[13px] whitespace-nowrap md:text-[18px] ${
+                      `font-medium mr-1.5 sm:mr-5 p-1 text-[13px] whitespace-nowrap md:text-[20px] ${
                         isActive
-                          ? "text-white/90 border-b  transition-all duration-300"
-                          : "text-white/65 hover:text-white/90 "
+                          ? "text-[#B500FF] border-b-2 rounded-md  transition-all duration-100"
+                          : "text-white/65 hover:text-[#B500FF] "
                       }`
                     }
                   >

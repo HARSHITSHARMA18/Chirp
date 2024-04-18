@@ -5,6 +5,9 @@ import Container from './Container/Container'
 import LogoutBtn from './Header/LogoutBtn'
 import Login from './Login'
 import SignUp from './SignUp'
+import HeroSection from './HeroSection'
+import Input from './Input'
+import Button from './Button'
 
 export  {
     Header,
@@ -13,5 +16,8 @@ export  {
     Container,
     LogoutBtn,
     Login, 
-    SignUp
+    SignUp,
+    HeroSection,
+    Input,
+    Button
 }
