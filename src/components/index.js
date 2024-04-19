@@ -11,6 +11,7 @@ import Button from './Button'
 import PostCard from './PostCard'
 import RTE from './RTE'
 import Select from './Select'
+import PostForm from './PostForm/PostForm'
 
 export  {
     Header,
@@ -25,5 +26,6 @@ export  {
     Button,
     PostCard,
     RTE,
-    Select
+    Select,
+    PostForm
 }
