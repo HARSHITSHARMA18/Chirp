@@ -9,6 +9,8 @@ import HeroSection from './HeroSection'
 import Input from './Input'
 import Button from './Button'
 import PostCard from './PostCard'
+import RTE from './RTE'
+import Select from './Select'
 
 export  {
     Header,
@@ -21,5 +23,7 @@ export  {
     HeroSection,
     Input,
     Button,
-    PostCard
+    PostCard,
+    RTE,
+    Select
 }
