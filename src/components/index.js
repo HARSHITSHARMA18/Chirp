@@ -8,6 +8,7 @@ import SignUp from './SignUp'
 import HeroSection from './HeroSection'
 import Input from './Input'
 import Button from './Button'
+import PostCard from './PostCard'
 
 export  {
     Header,
@@ -19,5 +20,6 @@ export  {
     SignUp,
     HeroSection,
     Input,
-    Button
+    Button,
+    PostCard
 }

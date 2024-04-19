@@ -10,6 +10,10 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Login, SignUp, LogoutBtn } from "./components/index.js";
 
 import Home from "./pages/Home.jsx";
+import Explore from "./pages/Explore.jsx";
+import AddChirp from "./pages/AddChirp.jsx";
+import EditChirp from "./pages/EditChirp.jsx";
+import Post from "./pages/Post.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +36,22 @@ const router = createBrowserRouter([
       {
         path: "/logout",
         element: <LogoutBtn />,
+      },
+      {
+        path: "/explore",
+        element: <Explore />,
+      },
+      {
+        path: "/add-chirp",
+        element: <AddChirp />,
+      },
+      {
+        path: "/edit-chirp/:slug",
+        element: <EditChirp />,
+      },
+      {
+        path: "/post/:slug",
+        element: <Post />,
       },
     ],
   },
