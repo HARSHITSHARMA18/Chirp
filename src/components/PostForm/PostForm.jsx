@@ -99,13 +99,13 @@ const PostForm = ({ post }) => {
         <Input
           label="Title :"
           placeholder="Title"
-          className="mb-4"
+          className="mb-4 text-white"
           {...register("title", { required: true })}
         />
         <Input
           label="Slug :"
           placeholder="Slug"
-          className="mb-4"
+          className="mb-4 text-white"
           disabled
           {...register("slug", { required: true })}
           onInput={(e) => {
@@ -125,7 +125,7 @@ const PostForm = ({ post }) => {
         <Input
           label="Featured Image :"
           type="file"
-          className="mb-4 "
+          className="mb-4 text-white "
           accept="image/png, image/jpg, image/jpeg, image/gif"
           {...register("image", { required: !post })}
         />
@@ -139,7 +139,7 @@ const PostForm = ({ post }) => {
           </div>
         )}
         <Select
-          options={["public", "draft"]}
+          options={["Public", "Draft"]}
           label="Status"
           className="mb-4"
           {...register("status", { required: true })}

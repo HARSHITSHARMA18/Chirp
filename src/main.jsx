@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-import { Login, SignUp, LogoutBtn } from "./components/index.js";
+import { Login, SignUp, LogoutBtn, AuthLayout } from "./components/index.js";
 
 import Home from "./pages/Home.jsx";
 import Explore from "./pages/Explore.jsx";
@@ -27,27 +27,51 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <Login />,
+        element: (
+          <AuthLayout authentication={false}>
+            <Login />
+          </AuthLayout>
+        ),
       },
       {
         path: "/signup",
-        element: <SignUp />,
+        element: (
+          <AuthLayout authentication={false}>
+            <SignUp />
+          </AuthLayout>
+        ),
       },
       {
         path: "/logout",
-        element: <LogoutBtn />,
+        element: (
+          <AuthLayout authentication>
+            <LogoutBtn />
+          </AuthLayout>
+        ),
       },
       {
         path: "/explore",
-        element: <Explore />,
+        element: (
+          <AuthLayout>
+            <Explore />
+          </AuthLayout>
+        ),
       },
       {
         path: "/add-chirp",
-        element: <AddChirp />,
+        element: (
+          <AuthLayout authentication>
+            <AddChirp />
+          </AuthLayout>
+        ),
       },
       {
         path: "/edit-chirp/:slug",
-        element: <EditChirp />,
+        element: (
+          <AuthLayout authentication>
+            <EditChirp />
+          </AuthLayout>
+        ),
       },
       {
         path: "/post/:slug",

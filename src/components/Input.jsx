@@ -11,7 +11,7 @@ const Input = React.forwardRef(function Input(
       {label && (
         <label
           className={`inline-block mb-1 pl-1 ${
-            className ? "text-black" : "text-white"
+            className ? className : "text-white"
           }  hover:underline decoration-[#B500FF]`}
           htmlFor={id}
         >

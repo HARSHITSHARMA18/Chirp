@@ -131,7 +131,7 @@ export class Service {
 
 
     // Get All Public Posts
-    async getPosts(queries =[Query.equal('status','public')]){
+    async getPosts(queries =[Query.equal('status','Public')]){
 
         try {
 
@@ -151,7 +151,7 @@ export class Service {
     }
 
     // Get All Drafts
-    async getDrafts(queries =[Query.equal('status','draft')]){
+    async getDrafts(queries =[Query.equal('status','Draft')]){
 
         try {
 

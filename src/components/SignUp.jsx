@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import authService from "../appwrite/auth";
-import login from "../store/authSlice";
+import { login } from "../store/authSlice";
 import { useForm } from "react-hook-form";
 import { Input, Button, Logo } from "./index";
 
@@ -10,6 +10,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
+  const { register, handleSubmit } = useForm();
   const [error, setError] = useState("");
 
   const create = async (data) => {
@@ -19,18 +20,21 @@ const SignUp = () => {
       const userData = await authService.createAccount(data);
 
       if (userData) {
-        console.log("User Data :", userData);
+        const currentUser = await authService.getCurrentUser();
 
-        dispatch(login({ userData }));
-        navigate("/");
+        if (currentUser) {
+          // console.log("User data: ", currentUser);
+
+          dispatch(login({ currentUser }));
+
+          navigate("/");
+        }
       }
     } catch (error) {
       setError(error.message);
       console.log("Signup error: ", error);
     }
   };
-
-  const { register, handleSubmit } = useForm();
 
   return (
     <div className="flex items-center justify-center p-[7rem]">
@@ -68,7 +72,7 @@ const SignUp = () => {
               })}
             />
 
-            <Input
+            {/* <Input
               label="Username"
               type="text"
               placeholder="Enter an username"
@@ -76,7 +80,7 @@ const SignUp = () => {
               {...register("username", {
                 required: true,
               })}
-            />
+            /> */}
 
             <Input
               label="Email"
