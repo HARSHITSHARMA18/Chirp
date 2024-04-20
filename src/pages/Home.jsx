@@ -45,7 +45,7 @@ const Home = () => {
     return (
       <div className="w-full text-center">
         <Container>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap ">
             <NoPosts text="Add Your first Chirp " />
           </div>
         </Container>

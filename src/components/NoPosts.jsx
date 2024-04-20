@@ -3,7 +3,7 @@ import { Logo } from "./index";
 
 const NoPosts = ({ text = "No Chirps" }) => {
   return (
-    <div className="">
+    <div className="mt-[4rem]">
       <Logo width="30%" className="justify-center animate-bounce " />
       <h1 className="md:text-3xl font-bold text-white p-4 hover:underline decoration-[#B500FF]">
         {text}
