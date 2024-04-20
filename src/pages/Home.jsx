@@ -3,7 +3,7 @@ import { HeroSection } from "../components/index";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import service from "../appwrite/config";
-import { Container, PostCard } from "../components/index";
+import { Container, PostCard, NoPosts } from "../components/index";
 
 const Home = () => {
   const authStatus = useSelector((state) => state.auth.status);
@@ -45,7 +45,9 @@ const Home = () => {
     return (
       <div className="w-full text-center">
         <Container>
-          <div className="flex flex-wrap">No posts to show</div>
+          <div className="flex flex-wrap">
+            <NoPosts text="Add Your first Chirp " />
+          </div>
         </Container>
       </div>
     );

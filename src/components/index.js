@@ -13,6 +13,7 @@ import RTE from './RTE'
 import Select from './Select'
 import PostForm from './PostForm/PostForm'
 import AuthLayout from './AuthLayout'
+import NoPosts from './NoPosts'
 
 export  {
     Header,
@@ -29,5 +30,6 @@ export  {
     RTE,
     Select,
     PostForm,
-    AuthLayout
+    AuthLayout,
+    NoPosts
 }

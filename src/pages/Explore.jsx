@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { Container, PostCard } from "../components";
 import service from "../appwrite/config";
 import { useSelector } from "react-redux";
+import { NoPosts } from "../components/index";
 
 const Explore = () => {
   const [posts, setPosts] = useState([]);
 
-  const userData = useSelector((state) => state.auth.userData);
-  // console.log('authSlice: (in AllPosts component): ', authSlice.$id || null)
+  // const userData = useSelector((state) => state.auth.userData);
+  const authStatus = useSelector((state) => state.auth.status);
 
   useEffect(() => {
     // console.log('Loaded AllPosts.jsx')
@@ -28,6 +29,18 @@ const Explore = () => {
       // console.log('unmounted from AllPosts.jsx')
     };
   }, []);
+
+  if (posts.length === 0) {
+    return (
+      <div className="w-full text-center">
+        <Container>
+          <div className="flex flex-wrap">
+            <NoPosts text="No Chirps By Users" />
+          </div>
+        </Container>
+      </div>
+    );
+  }
 
   return (
     <div className="w-full py-8">
