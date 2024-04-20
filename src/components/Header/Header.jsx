@@ -76,7 +76,7 @@ const Header = () => {
               <NavLink
                 to="/logout"
                 className={({ isActive }) =>
-                  `font-medium mr-1.5 sm:mr-5 p-1 text-[13px] whitespace-nowrap md:text-[18px] ${
+                  `font-medium mr-1.5 sm:mr-5 p-1 text-[13px] whitespace-nowrap md:text-[20px] ${
                     isActive
                       ? "text-white/90 border-b  transition-all duration-300"
                       : "text-white/65 hover:text-white/90 "

@@ -1,19 +1,26 @@
 import React from "react";
 import service from "../appwrite/config";
 import parse from "html-react-parser";
+import { Link } from "react-router-dom";
 
 const PostCard = ({ $id, title, content, featuredImage, userId }) => {
   return (
     <Link to={`/post/${$id}`}>
-      <div className="w-full bg-gray-100 rounded-xl p-4">
-        <h2 className="text-xl font-bold">{title}</h2>
+      <div className="md:w-[20rem] w-[15rem] bg-gray-100 rounded-xl p-4 border-4 border-[#B500FF]">
+        <div className="flex flex-col items-center">
+          <h2 className="text-xl font-bold p-3 bg-[#d7a4eb] rounded-xl m-1">
+            {title}
+          </h2>
 
-        <p className="text-black">{parse(content)}</p>
+          <p className="text-black p-3 bg-[#e9d8f0] rounded-xl">
+            {parse(content)}
+          </p>
+        </div>
 
-        <div className="w-full justify-center mb-4">
+        <div className="w-full justify-center mb-4 ">
           <img
-            src={service.getFilePreview(featuredImage)}
             alt={title}
+            src={service.getFilePreview(featuredImage)}
             className="rounded-xl"
           />
         </div>
