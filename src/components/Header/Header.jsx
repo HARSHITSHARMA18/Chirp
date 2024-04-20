@@ -34,6 +34,11 @@ const Header = () => {
       slug: "/add-chirp",
       active: authStatus,
     },
+    {
+      name: "Drafts",
+      slug: "/drafts",
+      active: authStatus,
+    },
     // {
     //   name: "Logout",
     //   slug: "/logout",

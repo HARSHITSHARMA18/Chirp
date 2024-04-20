@@ -14,6 +14,7 @@ import Explore from "./pages/Explore.jsx";
 import AddChirp from "./pages/AddChirp.jsx";
 import EditChirp from "./pages/EditChirp.jsx";
 import Post from "./pages/Post.jsx";
+import Drafts from "./pages/Drafts.jsx";
 
 const router = createBrowserRouter([
   {
@@ -52,8 +53,16 @@ const router = createBrowserRouter([
       {
         path: "/explore",
         element: (
-          <AuthLayout>
+          <AuthLayout authentication>
             <Explore />
+          </AuthLayout>
+        ),
+      },
+      {
+        path: "/drafts",
+        element: (
+          <AuthLayout authentication>
+            <Drafts />
           </AuthLayout>
         ),
       },
